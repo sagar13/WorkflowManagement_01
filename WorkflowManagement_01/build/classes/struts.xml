@@ -19,5 +19,16 @@
             <result name="publisher_success">login_publisher.jsp</result>
             <result name="error">login.jsp</result>
         </action>
+        <action name="create_wf"
+            class="action.CreateWfAction">
+            <result name="createwf_continue">continue_workflow.jsp</result>
+            <result name="error">login_admin.jsp</result>
+        </action>
+         <action name="continue_wf"
+            class="action.ContinueWfAction">
+            <result name="success">login_admin.jsp</result>
+            <result name="later">login_admin.jsp</result>
+            <result name="error">continue_workflow.jsp</result>
+        </action>
     </package>
 </struts>

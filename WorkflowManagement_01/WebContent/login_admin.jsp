@@ -8,5 +8,12 @@
 </head>
 <body>
 <h2> successful login!</h2>
+<a href="create_workflow.jsp">Create Workflow</a>
+<a href="#">Add Workflow Details</a>
+<a href="#">Edit Workflow</a>
+<a href="#">Manual Override</a>
+<a href="#">Add User</a>
+<a href="#">Assign Role</a>
+<a href="#">Edit User</a>
 </body>
 </html>
