@@ -24,11 +24,9 @@
             <result name="createwf_continue">continue_workflow.jsp</result>
             <result name="error">login_admin.jsp</result>
         </action>
-         <action name="continue_wf"
-            class="action.ContinueWfAction">
-            <result name="success">login_admin.jsp</result>
-            <result name="later">login_admin.jsp</result>
-            <result name="error">continue_workflow.jsp</result>
-        </action>
+        <action name="*Workflow" method="{1}" class="action.ContinueWfAction">
+   		 <result name="success">login_admin.jsp</result>
+   		 <result name="error">continue_workflow.jsp</result>
+		</action>
     </package>
 </struts>

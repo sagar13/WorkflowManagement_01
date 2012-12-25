@@ -21,11 +21,11 @@
 		<s:select label="Select a Lead" headerKey="-1"
 			headerValue="Select Lead"
 			list="#{'1':'Raghav', '2':'Sagar'}"
-			name="stageLeadName" />
-		<s:submit name="save_wf" method="execute" value="Create"
-			align="center" />
-		<s:submit name="later_wf" method="execute" value="Later"
-			align="center" />
+			name="stageLeadId" />
+		<s:submit name="button" value="Create"
+			action="addStageWorkflow" align="center" />
+		<s:submit name="button"  value="Later"
+			action="addLaterWorkflow" align="center" />
 	</s:form>
 </body>
 </html>

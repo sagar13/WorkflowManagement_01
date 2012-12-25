@@ -8,17 +8,17 @@ public class WorkflowDetails {
 	private int stageSLA;
 	private int stageSequenceNo;
 	private int stageLeadId;
-	private String wfId;
+	private int wfId;
 	
 	
 	public WorkflowDetails(){
 		
 	}
 	
-	public WorkflowDetails(int stageId, String stageName,
+	public WorkflowDetails(String stageName,
 			String stageDescription, int stageSLA, int stageSequenceNo,
-			int stageLeadId, String wfId) {
-		this.stageId = stageId;
+			int stageLeadId, int wfId) {
+		//this.stageId = stageId;
 		this.stageName = stageName;
 		this.stageDescription = stageDescription;
 		this.stageSLA = stageSLA;
@@ -62,10 +62,10 @@ public class WorkflowDetails {
 	public void setStageLeadId(int stageLeadId) {
 		this.stageLeadId = stageLeadId;
 	}
-	public String getWfId() {
+	public int getWfId() {
 		return wfId;
 	}
-	public void setWfId(String wfId) {
+	public void setWfId(int wfId) {
 		this.wfId = wfId;
 	}
 	

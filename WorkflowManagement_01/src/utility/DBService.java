@@ -46,7 +46,7 @@ public class DBService {
 			conn = new MySqlConnection().getConnection();
 			query = conn.prepareStatement(strQuery+" "+whereClause);
 			result = query.executeQuery();
-			conn.close();
+			//conn.close();
 			return result;
 		}catch(Exception ex){
 			System.out.println("Exception caught:\n" + ex);
@@ -65,16 +65,38 @@ public class DBService {
 		try {
 			conn= new MySqlConnection().getConnection();
 			pst=conn.prepareStatement(insertQuery);
+			
 			for (String string : params) {
 				pst.setString(i, string);
 				i++;
 			}
 			
 			result = pst.executeUpdate();
+			conn.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 			result =0;
 		}
 		return result;
 	}
+
+	
+	public static int DDLQueryInDB(String sqlQuery){
+		int result;
+		Connection conn=null;
+		PreparedStatement pst = null;
+
+		try {
+			conn= new MySqlConnection().getConnection();
+			pst=conn.prepareStatement(sqlQuery);
+			result = pst.executeUpdate();
+					
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			result =0;
+		}
+		return result;
+	}
+	
 }

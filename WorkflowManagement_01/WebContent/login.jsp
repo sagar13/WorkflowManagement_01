@@ -11,8 +11,8 @@
 <h2> Login page: </h2>
 <s:actionerror />
 <s:form action="login.action" method = "post">
-	<s:textfield name = "username" label="Username" size = "20" />
-	<s:password name = "password" label="Password" size="20" />
+	<s:textfield name = "username" label="Username" size = "20" value="admin1" />
+	<s:password name = "password" label="Password" size="20" value="pass1"/>
 	<s:submit name = "button1" method = "execute" value = "Login" align="center" />
 </s:form>
 </body>
